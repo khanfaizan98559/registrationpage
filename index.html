@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LGQTJETNJQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LGQTJETNJQ');
+</script>
+
+
     <style>
         body {
             display: flex;
@@ -54,12 +65,17 @@
 
     <script>
         document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            gtag("event", "register_click", {
+        event_category: "engagement",
+        event_label: "Register Button",
+    });
+    alert("Event Registered");
             event.preventDefault();
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
-            const phone = document.getElementById("phone").value;
-            alert("Registration Successful!\nName: " + name + "\nEmail: " + email + "\nPhone: " + phone);
+            const phone = document.getElementById("phone").value;            alert("Registration Successful!\nName: " + name + "\nEmail: " + email + "\nPhone: " + phone);
         });
     </script>
 </body>
+
 </html>
