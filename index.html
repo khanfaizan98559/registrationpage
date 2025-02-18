@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LGQTJETNJQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-LGQTJETNJQ');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGQTJETNJQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-LGQTJETNJQ');
+    </script>
 
     <style>
         body {
@@ -23,6 +23,7 @@
             height: 100vh;
             background-color: #f3f4f6;
         }
+
         .card {
             width: 300px;
             padding: 20px;
@@ -31,6 +32,7 @@
             border-radius: 8px;
             text-align: center;
         }
+
         input {
             width: 100%;
             padding: 10px;
@@ -38,6 +40,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
         button {
             width: 100%;
             padding: 10px;
@@ -47,11 +50,13 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
         button:hover {
             background: #0056b3;
         }
     </style>
 </head>
+
 <body>
     <div class="card">
         <h2>Sign-up Form</h2>
@@ -64,16 +69,16 @@
     </div>
 
     <script>
-        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        document.getElementById("registrationForm").addEventListener("submit", function (event) {
             gtag("event", "register_click", {
-        event_category: "engagement",
-        event_label: "Register Button",
-    });
-    alert("Event Registered");
+                event_category: "engagement",
+                event_label: "Register Button",
+            });
+            alert("Event Registered");
             event.preventDefault();
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
-            const phone = document.getElementById("phone").value;            alert("Registration Successful!\nName: " + name + "\nEmail: " + email + "\nPhone: " + phone);
+            const phone = document.getElementById("phone").value; alert("Registration Successful!\nName: " + name + "\nEmail: " + email + "\nPhone: " + phone);
         });
     </script>
 </body>
